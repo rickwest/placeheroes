@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/{width}/{height?}', 'ImageController@image')->where(['width' => '[0-9]+', 'height' => '[0-9]+']);
